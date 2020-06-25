@@ -28,10 +28,12 @@ class DashbookGameContainer extends StatelessWidget {
                   })
           : storyLoader(size);
 
-          return Container(
-              width: size.width,
-              height: size.height,
-              child: child,
+          return ClipRect(
+              child: Container(
+                  width: size.width,
+                  height: size.height,
+                  child: child,
+              )
           );
         }
     );
